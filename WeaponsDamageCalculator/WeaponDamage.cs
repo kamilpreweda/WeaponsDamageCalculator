@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeaponsDamageCalculator
 {
-    public class WeaponDamage
+    public abstract class WeaponDamage
     {
         public int roll;
         public bool flaming;
@@ -35,10 +35,8 @@ namespace WeaponsDamageCalculator
         /// <summary>
         /// Oblicza obrażenia na podstawie aktualnych wartości właściwości.
         /// </summary>
-        protected virtual void CalculateDamage()
-        {
-            // Przesłaniana w podklasach
-        }
+        protected abstract void CalculateDamage();
+       
 
         /// <summary>
         /// Konstruktor oblicza obrażenia na podstawie domyślnych wartości właściwości
